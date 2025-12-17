@@ -1,0 +1,33 @@
+{
+  "name": "chatgpt-optimizer-pro",
+  "version": "1.0.0",
+  "description": "Ultra-fast ChatGPT desktop client with GPU acceleration",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:exe": "electron-builder --win --x64",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.chatgpt.optimizer",
+    "productName": "ChatGPT Optimizer Pro",
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}
